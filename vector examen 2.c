@@ -1,24 +1,38 @@
 #include <stdio.h>
 
-void SumaFinder(int arr[], int n, int target) {
-    int i, j;
+void SumaFinder(int vector[], int size, int target) {
+    int found = 0; // Variable para determinar si se encontraron combinaciones válidas
 
-    for (i = 0; i < n; i++) {
-        for (j = i + 1; j < n; j++) {
-            if (arr[i] + arr[j] == target) {
-                printf("[%d] y [%d]\n", i, j);
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (vector[i] + vector[j] == target) {
+                printf("suma es %d: [%d] y  [%d] \n", target, i, j);
+                found = 1;
             }
         }
+    }
+
+    if (!found) {
+        printf("No se encontraron dos componentes cuya suma sea igual al número objetivo.\n");
     }
 }
 
 int main() {
-    int V[] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 33, 54, 7}; // igual se pude agremas o poner otro numero 
-    int n = sizeof(V) / sizeof(V[0]);
-    int target = 8; // se puede cambiar el numeros sal diferete resepuestas 
+    int size;
+    printf("Ingrese el tamaño del vector: ");
+    scanf("%d", &size);
 
-    printf("Combinaciones con suma igual a %d:\n", target);
-    SumaFinder(V, n, target);
+    int V[size];
+    printf("Ingrese los elementos del vector:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &V[i]);
+    }
+
+    int N;
+    printf("Ingrese el número objetivo N: ");
+    scanf("%d", &N);
+
+    SumaFinder(V, size, N);
 
     return 0;
 }
