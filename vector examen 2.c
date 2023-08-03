@@ -19,7 +19,7 @@ void SumaFinder(int vector[], int size, int target) {
 
 int main() {
     int size;
-    printf("Ingrese el tamaño del vector: ");
+    printf("Ingrese el tamano del vector: ");
     scanf("%d", &size);
 
     int V[size];
@@ -29,7 +29,7 @@ int main() {
     }
 
     int N;
-    printf("Ingrese el número objetivo N: ");
+    printf("Ingrese el numero objetivo N: ");
     scanf("%d", &N);
 
     SumaFinder(V, size, N);
