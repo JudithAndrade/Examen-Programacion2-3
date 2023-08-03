@@ -16,7 +16,7 @@ void SUMA(int vector[], int size, int objetivo) {
 
     // Si no se encontraron combinaciones válidas, mostramos un mensaje
     if (!encontrado) {
-        printf("No se encontraron combinaciones que sumen al número objetivo\n");
+        printf("No se encontraron combinaciones que sumen al numero objetivo\n");
     }
 }
 int main() {
@@ -33,7 +33,7 @@ int main() {
     // objectivo referencia al número 
     //al que se desea llegar mediante la suma de dos elementos del vector
     int objetivo;
-    printf("Ingrese el número objetivo: ");
+    printf("Ingrese el numero objetivo: ");
     scanf("%d", &objetivo);
 
     // Llamamos a la función SUMA para buscar las combinaciones en el vector V
