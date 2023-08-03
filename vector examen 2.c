@@ -16,7 +16,7 @@ void SumaFinder(int vector[], int size, int target) { // Función para encontrar
    
     // Si no se encontraron combinaciones válidas, mostramos un mensaje
     if (!found) {
-        printf("No sesuma sea igual al número objetivo.\n");
+        printf("No se suma sea igual al numero objetivo.\n");
     }
 }
 
